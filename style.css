@@ -77,19 +77,6 @@ h1 {
     text-align: left;
 }
 
-a,
-{
-    border-bottom: 1px dotted;
-    color: #5E5E5E;
-    outline: none;
-    text-decoration: none;
-}
-
-a:hover {
-    border-bottom: 1px solid;
-    color: #fa8072;
-}
-
 ul {
     margin: 2px 0px 18px 16px;
     padding: 0px 0px 16px 0px;
@@ -100,16 +87,21 @@ ul li {
     padding: 0;
 }
 
-ul li a {
-    color: #5E5E5E;
-    border-bottom: 1px dotted;
-}
-
-ul li a:hover {
-    border-bottom: 1px bottom;
-    cursor: pointer;
-}
-
 ul li div.abstract-detail {
     display: none;
 }
+
+a
+{
+    border-bottom: 1px dotted;
+    color: #5E5E5E;
+    outline: none;
+    text-decoration: none;
+}
+
+a:hover {
+    border-bottom: 1px solid;
+    color: #fa8072;
+    cursor: pointer;
+}
+
