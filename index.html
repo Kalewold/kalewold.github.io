@@ -8,15 +8,15 @@ Kalewold Kalewold philosophy of science, Kalewold Kalewold philosophy of biology
     <title> Kalewold H. Kalewold </title>
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
 </head>
 
 <body>
     <script>
         $(function() {
-
-            $('#abstract a').each(function() {
+            $('.abstract a').each(function() {
                 $(this).click(function() {
-                    $(this).siblings('div').slideToggle(300);
+                    $(this).siblings('div.abstract-detail').slideToggle(300);
                 });
             });
 
@@ -26,14 +26,10 @@ Kalewold Kalewold philosophy of science, Kalewold Kalewold philosophy of biology
     <div id="content">
         <h2> About </h2>
         <p>
-
-        </p>
-        <p>
             I am a doctoral candidate in philosophy at the University of Maryland, College Park. My primary research projects are in philosophy of science (especially biology), philosophy of race, and political philosophy. In addition, I am pursuing research in bioethics
             and philosophy of economics. In my projects, I often draw on the theoretical and experimental tools of biology to illuminate broader issues in philosophy of race and social and political philosophy.
         </p>
         <p>
-
             In my dissertation project, I develop the philosophical foundations of the new mechanist approach to explanation.
 
         </p>
@@ -50,11 +46,11 @@ Kalewold Kalewold philosophy of science, Kalewold Kalewold philosophy of biology
 
         <h2>Publications</h2>
 
-        <ul id="abstract">
-            <li>&#8220;Race and Medicine in Light of the New Mechanistic Philosophy of Science&#8221;
+        <ul class="abstract">
+            <li>"Race and Medicine in Light of the New Mechanistic Philosophy of Science"
                 <br><i>Biology and Philosophy, 2020 </i> (
                 <a>Abstract</a>) (<a href="https://link.springer.com/article/10.1007/s10539-020-09759-x" target="_blank">PDF</a>)
-                <div>
+                <div class="abstract-detail">
                     <p>
                         Racial disparities in health outcomes have recently become a fashpoint in the debate about the value of race as a biological concept. What role, if any, race has in the etiology of disease is a philosophically and scientifcally contested topic. In this
                         article, I expand on the insights of the new mechanistic philosophy of science to defend a mechanism discovery approach to investigating epidemiological racial disparities. The mechanism discovery approach has explanatory virtues
@@ -66,7 +62,7 @@ Kalewold Kalewold philosophy of science, Kalewold Kalewold philosophy of biology
         </ul>
 
         <h2> Works In Progress</h2>
-        <ul id="abstract">
+        <ul class="abstract">
             <li>"Structure Determines Function: A Case for Metaphysical Explanation in Biology" </li>
             <li>"The Case for Black Reparations in the United States Kidney Allocation System" </li>
             <li>"A Novel Account of Activities" </li>
@@ -76,7 +72,7 @@ Kalewold Kalewold philosophy of science, Kalewold Kalewold philosophy of biology
 
 
         <h2>Teaching </h2>
-        <ul id="abstract">
+        <ul class="abstract">
             <li> <span class="course-id">(PHIL 100)</span> Introduction to Philosophy <span class="semesters-taught">Winter 2020</span></li>
             <li> <span class="course-id">(PHIL 140)</span> Contemporary Moral Issues <span class="semesters-taught">Fall 2017, Winter 2019, Spring 2019 </span> </li>
             <li> <span class="course-id">(PHIL 458)</span> Philosophy in the Age of Revolutions <span class="semesters-taught"> Spring 2018 </span> </li>
