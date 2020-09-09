@@ -60,8 +60,8 @@ h3,
 h4,
 h5,
 h6 {
-    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
     margin-top: 0.8em;
+    font-variant-caps: small-caps;
 }
 
 h1,
