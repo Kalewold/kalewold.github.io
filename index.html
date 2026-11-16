@@ -1,164 +1,272 @@
 <!doctype html>
-<html>
-
+<html lang="en">
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-179385565-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kal H. Kalewold</title>
+<meta name="description" content="Kal H. Kalewold is a Lecturer in Philosophy at the University of Leeds, working in philosophy of science, philosophy of race, and moral and political philosophy.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&amp;display=swap" rel="stylesheet">
+<style>
+:root {
+  --ground: #F6F7F4;
+  --ink: #17201D;
+  --muted: #4F5A56;
+  --rule: #D5DAD3;
+  --accent: #1E5B4A; /* link colour: change this one value to restyle every link */
+  --serif: 'Newsreader', 'Iowan Old Style', Georgia, serif;
+  --sans: 'Instrument Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+body { margin: 0; background: var(--ground); color: var(--ink); font-family: var(--serif); font-size: 19px; line-height: 1.6; font-variant-numeric: oldstyle-nums; }
+p { margin: 0; text-wrap: pretty; }
+ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; }
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible, summary:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; border-radius: 2px; }
 
-  gtag('config', 'UA-179385565-1');
-</script>
-    <meta name="description" content="Kal Kalewold's professional website" />
-    <meta name="keywords" content="Kal Hailu Kalewold, Kal Kalewold philosophy,
-Kalewold philosophy of science, Kalewold philosophy of biology,Kalewold philosophy of race, kalewold political philosophy" />
-    <title> Kal H. Kalewold </title>
-    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 56px); }
+.label { margin: 0; font-family: var(--sans); font-size: 12.5px; font-weight: 600; letter-spacing: 0.11em; text-transform: uppercase; color: var(--muted); }
+
+/* Top navigation */
+nav { display: flex; flex-wrap: wrap; gap: 0 28px; padding: 14px 0; font-family: var(--sans); font-size: 14px; letter-spacing: 0.01em; }
+nav a { padding: 12px 0; color: var(--muted); text-decoration: none; }
+nav a:hover { color: var(--ink); text-decoration: underline; }
+
+/* Name and research areas */
+header { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 36px 48px; padding: 64px 0 68px; }
+.name { flex: 999 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 14px; }
+h1 { margin: 0; font-size: clamp(42px, 6.4vw, 68px); font-weight: 400; line-height: 1.04; letter-spacing: -0.018em; text-wrap: balance; }
+.role { font-size: 23px; line-height: 1.35; font-style: italic; color: var(--muted); }
+.links { display: flex; flex-wrap: wrap; gap: 6px 26px; padding-top: 10px; font-family: var(--sans); font-size: 15px; }
+.areas { flex: 1 1 240px; min-width: 0; display: flex; flex-direction: column; gap: 8px; font-family: var(--sans); }
+.areas ul { gap: 4px; font-size: 15px; line-height: 1.45; }
+
+/* Sections: label in the left margin, content on the right */
+section { display: flex; flex-wrap: wrap; gap: 12px 48px; padding: 48px 0; border-top: 1px solid var(--rule); scroll-margin-top: 16px; }
+section > h2 { flex: 0 0 160px; }
+.col { flex: 999 1 480px; min-width: 0; max-width: 660px; display: flex; flex-direction: column; }
+#about > h2 { padding-top: 9px; }
+#book > h2 { padding-top: 14px; }
+#articles > h2 { padding-top: 7px; }
+#in-progress > h2, #contact > h2 { padding-top: 6px; }
+#teaching > h2 { padding-top: 3px; }
+
+#about .col { gap: 18px; }
+.lead { font-size: 23px; line-height: 1.45; }
+
+#book .col { gap: 10px; }
+.book-title { margin: 0; font-size: clamp(30px, 4vw, 38px); font-weight: 400; font-style: italic; line-height: 1.15; letter-spacing: -0.01em; }
+#book .meta { gap: 4px 18px; }
+.book-note { margin-top: 6px; }
+
+#articles .col { gap: 26px; }
+article { display: flex; flex-direction: column; gap: 2px; }
+article h3 { margin: 0; font-size: 22px; font-weight: 500; line-height: 1.3; text-wrap: balance; }
+.meta { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 18px; }
+.meta p { font-size: 17px; color: var(--muted); }
+.meta a { font-family: var(--sans); font-size: 14.5px; }
+.prize { margin-top: 4px; font-family: var(--sans); font-size: 14.5px; font-weight: 500; line-height: 1.45; }
+summary { cursor: pointer; list-style: none; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; color: var(--accent); font-family: var(--sans); font-size: 14.5px; }
+summary::-webkit-details-marker { display: none; }
+summary::before { content: "+"; display: inline-block; width: 10px; text-align: center; }
+details[open] > summary::before { content: "\2212"; }
+details p { margin: 2px 0 8px; font-size: 17px; line-height: 1.6; color: #2C3632; }
+
+#in-progress ul { gap: 10px; }
+
+#teaching .col { gap: 30px; }
+.inst { display: flex; flex-direction: column; gap: 8px; }
+.inst h3 { margin: 0; font-family: var(--sans); font-size: 15px; font-weight: 600; line-height: 1.4; }
+.inst ul { gap: 6px; }
+.inst li { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 0 24px; }
+.inst li span:last-child { font-family: var(--sans); font-size: 14px; color: var(--muted); font-variant-numeric: tabular-nums lining-nums; }
+
+#contact .col { flex-direction: row; flex-wrap: wrap; gap: 20px 64px; }
+.contact-links { display: flex; flex-direction: column; gap: 4px; }
+.address { color: var(--muted); }
+
+footer { padding: 28px 0 56px; border-top: 1px solid var(--rule); font-family: var(--sans); font-size: 13.5px; color: var(--muted); font-variant-numeric: lining-nums; }
+</style>
 </head>
-
 <body>
-    <script>
-        $(function() {
-            $('.abstract a').each(function() {
-                $(this).click(function() {
-                    $(this).siblings('div.abstract-detail').slideToggle(300);
-                });
-            });
+<div class="wrap">
 
-        });
-    </script>
-    <h1 id="title"> Kal H. Kalewold </h1>
-    <div id="content">
-        <h2> About </h2>
-        <p>
-            I am a Lecturer in Philosophy at the University of Leeds. Before that, I was a Postdoctoral Fellow jointly with the Department of Philosophy and at the McCoy Family Center for Ethics in Society at Stanford University. I received my PhD in philosophy from the University of Maryland, College Park in 2021. 
-       </p>
-        
-         <p> My primary research projects are in philosophy of science (especially biology), philosophy of race, and moral and political philosophy. In my projects, I often draw on the theoretical and empirical approaches of biological and social sciences to illuminate broader issues in philosophy of race, ethics and political philosophy, and public policy.
-        </p>
-        
-        <p> In philosophy of science, I am interested in explanation in the special sciences and theories of naturalness or genuineness of kinds.  </p>
+<nav aria-label="Sections">
+  <a href="#about">About</a>
+  <a href="#book">Book</a>
+  <a href="#articles">Articles</a>
+  <a href="#in-progress">In progress</a>
+  <a href="#teaching">Teaching</a>
+  <a href="#contact">Contact</a>
+</nav>
 
-        <p>In moral and political philosophy, my work is at the intersection of ethics and public policy. I am currently working on projects in the ethics of compensation and integration, defending a novel electoral system, and developing a framework to critique "good" algorithmic governance. </p>
-        
-        <p>In philosophy of race, I have research interests at the intersection of race, metaphysics, and philosophy of medicine.  </p>
-        <h2> Contact </h2>
-        <p>
-            You can e-mail me at <a href="mailto:k.kalewold@leeds.ac.uk">k.kalewold@leeds.ac.uk</a> and you can find me on <a target="_blank" href="https://philpeople.org/profiles/kalewold-kalewold">philpeople</a>.
-        </p> 
-
-       <h2> Publications </h2>
-        <h3> Book </h3>
-        <ul class="abstract">
-            <li> Metaphysics of Race (Elements in Metaphysics)
-            <br><i>Cambridge University Press, 2024 </i> (
-            <a>Abstract</a>)
-            <div class="abstract-detail">
-                <p>
-                    Are races real? Is race a biological or social category? What role, if any, does race play in scientific explanations? This Cambridge Element addresses these and other core questions in the metaphysics of race. I discuss prominent accounts of race such as biological racial realism, 
-                    social constructivism about race, and racial anti-realism. If anti-realists are right, our societies find themselves in thrall to a concept that is scarcely more veridical than ‘witch’ or ‘werewolf’. Social constructionism grounds race in factors ultimately controlled by human thought and action.  
-                    Biological racial realists argue that race is too quickly dismissed as biologically meaningful, and that it has a role to play in contemporary life sciences. I explore these views and show their virtues and shortcomings. In particular, I advance an argument against biological racial realism that 
-                    draws on the metaphysics of naturalness and philosophy of biology and medicine. 
-                </p>
-            </div>
-            </li>
-        </ul> 
-        <h3> Articles </h3>
-            <ul class="abstract">
-     <li>"Every Day an Election Day"
-         <br><i>Free & Equal, 2025 </i> (
-         <a>Abstract</a>)
-          <div class="abstract-detail">
-              <p>
-                Voting occurs on Election Day. In the history of electoral democracy, this fact has been closely identified with the practice of elections. However, I argue the temporality of election time generates problems that undermine or disable crucial democratic values such as responsiveness, popular rule, 
-                  and government accountability, among others. This paper outlines and defends a new electoral system I call “registral voting.” Under this system voters electronically register their votes daily—thereby eliminating the distinction between electoral and non-electoral periods—with the results determined 
-                  by summing up votes over the whole term of office. In effect, under registral voting every day is election day. Registral voting reduces the capacity of politicians to manipulate near-election events for their benefit and empowers voters to make informed choices based on a wide range of salient information 
-                  as and when they arise. Registral voting preserves the virtues of electoral democracy while mitigating or eliminating anomalies of election time highlighted by critics of elections and empirical studies of voter behavior.  
-              </p>
-          </div>
-     </li>
- </ul>
-  <ul class="abstract">
-     <li>"Is Race (Minimally) Biologically Real?"
-         <br><i>Philosophy of Science, forthcoming </i> (
-         <a>Abstract</a>)
-          <div class="abstract-detail">
-              <p>
-                  Recent work by Michael O. Hardimon and Quayshawn Spencer defends a minimalist (or deflationary) biological realism about race. Their approach has two distinct features. First, unlike revisionist biological race concepts defended by, for instance, Phillip Kitcher and Robin Andreasen, 
-                  minimalist biological races are a conception of race that correspond to our ordinary race concepts. Second, unlike hereditarian or essentialist accounts, minimalist biological races are not claimed to be robustly explanatory. This talk argues against their account of the biological 
-                  genuineness of race. I argue the minimalist biological conception of race lacks the explanatory constraints of genuine biological kinds. Rather, minimalist biological races are gerrymandered kinds.
-              </p>
-          </div>
-     </li>
- </ul>
-        <ul class="abstract">
-           <li>"The Hybrid Account of Activities"
-               <br><i>Synthese, 2024 </i> (
-               <a>Abstract</a>)
-               <div class="abstract-detail">
-                   <p>
-                       According to an influential account of the new mechanistic philosophy of science, entities and activities compose mechanisms. However, the new mechanists have paid too little attention to activities. Critics have charged that accounts of activities in the new mechanism 
-                       literature are philosophically uninformative and opaque. This paper defends a novel account of causally productive activities, which I call the Hybrid Account, that marries the two dominant philosophical approaches to causation: production and difference-making. 
-                       The Hybrid Account of Activities (HAA) identifies causally productive activities as robust difference-makers to the next stage of a mechanism. The Hybrid Account provides attractive solutions to causal identification and causal selection problems faced by earlier activities views. 
-                   </p>
-               </div>
-           </li>
-       </ul>
-        <ul class="abstract">
-           <li>"Lockdowns and the Ethics of Intergenerational Compensation"
-               <br><i>Politics, Philosophy, and Economics, 2023 </i> (
-                <a>Abstract</a>) (<a href="https://journals.sagepub.com/doi/full/10.1177/1470594X231178497" target="_blank">Link</a>)
-               <div class="abstract-detail">
-                   <p>
-                       Lockdowns were a morally and medically appropriate anti-contagion policy to stop the spead of Covid. However, lockdowns came with considerable costs. Specifically, lockdowns imposed harms and losses upon the young in order to benefit the elderly, who were 
-                       at the highest risk of severe illness and death from Covid. This represented a shifting of the (epidemiological) burden of Covid for the elderly to a systemic burden of lockdowns upon the young. This paper argues that even if lockdowns were a morally permissible 
-                       response to Covid, the harms and losses they imposed on the young ground a claim of compensation. I defend an Intergenerational Compensation Argument that defends a claim for an egalitarian intergenerational transfer to compensate the young for the harms of lockdown.
-                   </p>
-               </div>
-           </li>
-        </ul>
-        <ul class="abstract">
-            <li>"Race and Medicine in Light of the New Mechanistic Philosophy of Science"
-                <br><i>Winner of the 2020 PSA Prize in Philosophy of Science & Race </i>
-                <br><i>Biology and Philosophy, 2020 </i> (
-                <a>Abstract</a>) (<a href="https://link.springer.com/article/10.1007/s10539-020-09759-x" target="_blank">Link</a>)
-                <div class="abstract-detail">
-                    <p>
-                        Racial disparities in health outcomes have recently become a flashpoint in the debate about the value of race as a biological concept. What role, if any, race has in the etiology of disease is a philosophically and scientifcally contested topic. In this
-                        article, I expand on the insights of the new mechanistic philosophy of science to defend a mechanism discovery approach to investigating epidemiological racial disparities. The mechanism discovery approach has explanatory virtues
-                        lacking in the populational approach typically employed in the study of race and biomedicine. The explanatory constraints that form an integral part of the new mechanistic approach enable mechanism discovery to avoid the epistemic
-                        and normative shortcomings of the populational approach. The methodology of mechanism discovery can fruitfully be extended to the treatment and reversal of epidemiological racial disparities.
-                    </p>
-                </div>
-            </li>
-        </ul>
-
-        <h2> Works In Progress</h2>
-        <ul class="abstract">
-            <li> a paper on the integration vs pluralism debate </li>
-            <li> a paper about naturalness in the life sciences </li>  
-            <li> a paper about racialization </li>
-            <li> a paper about non-domination and AI decision-making </li>
-             
-        </ul>
-
-        <h2> Selected Teaching </h2>
-        <ul class="abstract">
-            <li> <span class="course-id">(PHIL 277)</span> Philosophy of Biology (Leeds) <span class="semesters-taught"> Spring 2023 </span></li>
-            <li> <span class="course-id">(PHIL 100)</span> PPE First Year Seminar (Leeds)  <span class="semesters-taught"> Fall 2022 </span></li>
-            <li> <span class="course-id">(PHIL 140)</span> On Domination (Stanford) <span class="semesters-taught"> Spring 2022 </span> </li>
-            <li> <span class="course-id">(PHIL 458)</span> Philosophy in the Age of Revolutions (UMD) <span class="semesters-taught"> Spring 2018 </span> </li>
-            <li> <span class="course-id">(PHIL 140)</span> Contemporary Moral Issues (UMD) <span class="semesters-taught"> Spring 2019, Fall 2020 </span> </li>
-            <li> <span class="course-id">(PHIL 308)</span> Philosophy of Race (UMD) <span class="semesters-taught"> Fall 2018 </span> </li>
-            <li> <span class="course-id">(PHPE 401)</span> Capitalism and Socialism (UMD) <span class="semesters-taught"> Summer 2020 </span></li>
-        </ul>
-
-        </ul>
+<header>
+  <div class="name">
+    <h1>Kal H. Kalewold</h1>
+    <p class="role">Lecturer in Philosophy, University of Leeds</p>
+    <div class="links">
+      <a href="mailto:k.kalewold@leeds.ac.uk">k.kalewold@leeds.ac.uk</a>
+      <a href="https://philpeople.org/profiles/kal-kalewold">PhilPeople</a>
     </div>
-</body>
+  </div>
+  <div class="areas">
+    <p class="label">Research areas</p>
+    <ul>
+        <li>Philosophy of science</li>
+      <li>Philosophy of race</li>
+      <li>Moral and political philosophy</li>
+    </ul>
+  </div>
+</header>
 
+<section id="about">
+  <h2 class="label">About</h2>
+  <div class="col">
+    <p class="lead">I am a Lecturer in Philosophy at the University of Leeds. I work in philosophy of science, philosophy of race, and moral and political philosophy.</p>
+    <p>Before Leeds I was a postdoctoral fellow at Stanford University, jointly in the Department of Philosophy and the McCoy Family Center for Ethics in Society. I received my PhD from the University of Maryland, College Park in 2021.</p>
+    <p>My research projects are on what it takes for people to relate as free and equal under the institutions that govern them: electoral systems, residential arrangements, and increasingly, algorithms. In philosophy of science and race, my research examines how race and racialization, and variation more broadly, figure in scientific explanation and what that tells us about our natural and social worlds. </p>
+  </div>
+</section>
+
+<section id="book">
+  <h2 class="label">Book</h2>
+  <div class="col">
+    <h3 class="book-title">Metaphysics of Race</h3>
+    <div class="meta">
+      <p>Cambridge University Press, 2024. Elements in Metaphysics.</p>
+      <a href="https://www.cambridge.org/core/elements/metaphysics-of-race/7C3188CE0338B61855B46DB59C085071">Publisher&rsquo;s page</a>
+    </div>
+    <p class="book-note">Are races real? Is race a biological or social category? What role, if any, does race play in scientific explanations? This Cambridge Element addresses these and other core questions in the metaphysics of race. It discusses prominent accounts of race such as biological racial realism, social constructivism about race, and racial anti-realism. If anti-realists are right, our societies find themselves in thrall to a concept that is scarcely more veridical than 'witch' or 'werewolf'. Social constructionism grounds race in factors ultimately controlled by human thought and action. Biological racial realists argue that race is too quickly dismissed as biologically meaningful, and that it has a role to play in contemporary life sciences. The Element explores these views and shows their virtues and shortcomings. In particular, it advances an argument against biological racial realism that draws on the metaphysics of naturalness and philosophy of biology and medicine.</p>
+  </div>
+</section>
+
+<section id="articles">
+  <h2 class="label">Articles</h2>
+  <div class="col">
+
+    <article>
+      <h3>Every Day an Election Day</h3>
+      <div class="meta">
+        <p><em>Free &amp; Equal</em>, 2025</p>
+      </div>
+      <details>
+        <summary>Abstract</summary>
+        <p>Voting occurs on Election Day. In the history of electoral democracy, this fact has been closely identified with the practice of elections. However, I argue the temporality of election time generates problems that undermine or disable crucial democratic values such as­ responsiveness, popular rule, and government accountability, among others. This paper outlines and defends a new electoral system I call “registral voting.” Under this system voters electronically register their votes daily—thereby eliminating the distinction between electoral and non-electoral periods—with the results determined by summing up votes over the whole term of office. In effect, under registral voting every day is election day. Registral voting reduces the capacity of politicians to manipulate near-election events for their benefit and empowers voters to make informed choices based on a wide range of salient information as and when they arise. Registral voting preserves the virtues of electoral democracy while mitigating or eliminating anomalies of election time highlighted by critics of elections and empirical studies of voter behavior.</p>
+      </details>
+    </article>
+
+    <article>
+      <h3>Is Race (Minimally) Biologically Real?</h3>
+      <div class="meta">
+        <p><em>Philosophy of Science</em>, 2025</p>
+        <a href="https://doi.org/10.1017/psa.2025.10141">Published version</a>
+      </div>
+      <details>
+        <summary>Abstract</summary>
+        <p>Recent work by Michael O. Hardimon and Quayshawn Spencer defends a minimalist (or deflationary) biological realism about race. Their approach has two distinct features. First, unlike revisionist biological race, minimalist biological races are a conception of race that correspond to our ordinary race concepts. Second, unlike hereditarian or essentialist accounts, minimalist biological races are not claimed to be robustly explanatory. This article argues against their account of the biological genuineness of race. I argue that the minimalist biological conception of race lacks the explanatory constraints of genuine biological kinds. Rather, minimalist biological races are gerrymandered kinds.</p>
+      </details>
+    </article>
+
+    <article>
+      <h3>The Hybrid Account of Activities</h3>
+      <div class="meta">
+        <p><em>Synthese</em>, 2024</p>
+        <a href="https://doi.org/10.1007/s11229-023-04452-4">Published version</a>
+      </div>
+      <details>
+        <summary>Abstract</summary>
+        <p>According to an influential account of the new mechanistic philosophy of science, entities and activities compose mechanisms. However, the new mechanists have paid too little attention to activities. Critics have charged that accounts of activities in the new mechanism literature are philosophically uninformative and opaque. This paper defends a novel account of causally productive activities, which I call the Hybrid Account, that marries the two dominant philosophical approaches to causation: production and difference-making. The Hybrid Account of Activities (HAA) identifies causally productive activities as robust difference-makers to the next stage of a mechanism. The Hybrid Account provides attractive solutions to causal identification and causal selection problems faced by earlier activities views.</p>
+      </details>
+    </article>
+
+    <article>
+      <h3>Lockdowns and the Ethics of Intergenerational Compensation</h3>
+      <div class="meta">
+        <p><em>Politics, Philosophy &amp; Economics</em>, 2023</p>
+        <a href="https://journals.sagepub.com/doi/full/10.1177/1470594X231178497">Published version</a>
+      </div>
+      <details>
+        <summary>Abstract</summary>
+        <p>Lockdowns were a morally and medically appropriate anti-contagion policy to stop the spread of Covid. However, lockdowns came with considerable costs. Specifically, lockdowns imposed harms and losses upon the young in order to benefit the elderly, who were at the highest risk of severe illness and death from Covid. This represented a shifting of the (epidemiological) burden of Covid for the elderly to a systemic burden of lockdown upon the young. This article argues that even if lockdowns were a morally permissible response to Covid, the harms and losses they imposed on the young ground a claim of compensation. I defend an intergenerational compensation argument that defends a claim for an egalitarian intergenerational transfer to compensate the young for the harms of lockdown.</p>
+      </details>
+    </article>
+
+    <article>
+      <h3>Race and Medicine in Light of the New Mechanistic Philosophy of Science</h3>
+      <div class="meta">
+        <p><em>Biology &amp; Philosophy</em>, 2020</p>
+        <a href="https://link.springer.com/article/10.1007/s10539-020-09759-x">Published version</a>
+      </div>
+      <p class="prize">Winner of the 2020 PSA Prize in Philosophy of Science &amp; Race</p>
+      <details>
+        <summary>Abstract</summary>
+        <p>Racial disparities in health outcomes have recently become a flashpoint in the debate about the value of race as a biological concept. What role, if any, race has in the etiology of disease is a philosophically and scientifically contested topic. In this article, I expand on the insights of the new mechanistic philosophy of science to defend a mechanism discovery approach to investigating epidemiological racial disparities. The mechanism discovery approach has explanatory virtues lacking in the populational approach typically employed in the study of race and biomedicine. The explanatory constraints that form an integral part of the new mechanistic approach enable mechanism discovery to avoid the epistemic and normative shortcomings of the populational approach. The methodology of mechanism discovery can fruitfully be extended to the treatment and reversal of epidemiological racial disparities.</p>
+      </details>
+    </article>
+
+  </div>
+</section>
+
+<section id="in-progress">
+  <h2 class="label">In progress</h2>
+  <ul class="col">
+    <li>A paper on the ethics of integration as public policy </li>
+    <li>A paper about the wrongs of (morally) good AI</li>
+      <li>A paper about racialization in social science explanations</li>
+      <li>A paper about fairness as a value of electoral systems </li>
+  </ul>
+</section>
+
+<section id="teaching">
+  <h2 class="label">Teaching</h2>
+  <div class="col">
+
+    <div class="inst">
+      <h3>University of Leeds</h3>
+      <ul>
+        <li><span>Philosophy for PPE</span><span>PHIL 1555 · Fall 2022-present</span></li>
+          <li><span>Political Philosophy</span><span>PHIL2915. Spring 2024-present</span></li>
+          <li><span>Philosophy of Biology</span><span>PHIL 3320/5960 · Spring 2023</span></li>
+      </ul>
+    </div>
+
+    <div class="inst">
+      <h3>Stanford University</h3>
+      <ul>
+        <li><span>On Domination</span><span>PHIL 177/277 · Spring 2022</span></li>
+      </ul>
+    </div>
+
+    <div class="inst">
+      <h3>University of Maryland, College Park</h3>
+      <ul>
+        <li><span>Contemporary Moral Issues</span><span>PHIL 140 · Spring 2019, Fall 2020</span></li>
+        <li><span>Capitalism and Socialism</span><span>PHPE 401 · Summer 2020</span></li>
+        <li><span>Philosophy of Race</span><span>PHIL 308 · Fall 2018</span></li>
+        <li><span>Philosophy in the Age of Revolutions</span><span>PHIL 458 · Spring 2018</span></li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<section id="contact">
+  <h2 class="label">Contact</h2>
+  <div class="col">
+    <div class="contact-links">
+      <a href="mailto:k.kalewold@leeds.ac.uk">k.kalewold@leeds.ac.uk</a>
+      <a href="https://philpeople.org/profiles/kal-kalewold">PhilPeople profile</a>
+    </div>
+    <p class="address">School of Philosophy, Religion and History of Science<br>University of Leeds<br>Leeds LS2 9JT</p>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2026 Kal H. Kalewold</p>
+</footer>
+
+</div>
+</body>
 </html>
