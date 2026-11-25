@@ -49,7 +49,7 @@ section > h2 { flex: 0 0 160px; }
 .col { flex: 999 1 480px; min-width: 0; max-width: 660px; display: flex; flex-direction: column; }
 #about > h2 { padding-top: 9px; }
 #book > h2 { padding-top: 14px; }
-#articles > h2 { padding-top: 7px; }
+#articles > h2, #chapters > h2 { padding-top: 7px; }
 #in-progress > h2, #contact > h2 { padding-top: 6px; }
 #teaching > h2 { padding-top: 3px; }
 
@@ -88,6 +88,8 @@ details p { margin: 2px 0 8px; font-size: 17px; line-height: 1.6; color: #2C3632
 .address { color: var(--muted); }
 
 footer { padding: 28px 0 56px; border-top: 1px solid var(--rule); font-family: var(--sans); font-size: 13.5px; color: var(--muted); font-variant-numeric: lining-nums; }
+#reviews > h2 { padding-top: 7px; }
+#reviews .col { gap: 26px; }
 </style>
 </head>
 <body>
@@ -97,6 +99,8 @@ footer { padding: 28px 0 56px; border-top: 1px solid var(--rule); font-family: v
   <a href="#about">About</a>
   <a href="#book">Book</a>
   <a href="#articles">Articles</a>
+  <a href="#chapters">Chapters</a>
+  <a href="#reviews">Reviews</a>
   <a href="#in-progress">In progress</a>
   <a href="#teaching">Teaching</a>
   <a href="#contact">Contact</a>
@@ -125,6 +129,7 @@ footer { padding: 28px 0 56px; border-top: 1px solid var(--rule); font-family: v
       <p>Cambridge University Press, 2024. Elements in Metaphysics.</p>
       <a href="https://www.cambridge.org/core/elements/metaphysics-of-race/7C3188CE0338B61855B46DB59C085071">Publisher&rsquo;s page</a>
     </div>
+    <p class="prize">Reviewed by Naomi Zack in <em>Metascience</em>: <a href="https://link.springer.com/article/10.1007/s11016-026-01195-z">&ldquo;Does race have a metaphysics?&rdquo;</a></p>
    <details>
   <summary>Abstract</summary>
   <p>Are races real? Is race a biological or social category? What role, if any, does race play in scientific explanations? This Cambridge Element addresses these and other core questions in the metaphysics of race. It discusses prominent accounts of race such as biological racial realism, social constructivism about race, and racial anti-realism. If anti-realists are right, our societies find themselves in thrall to a concept that is scarcely more veridical than 'witch' or 'werewolf'. Social constructionism grounds race in factors ultimately controlled by human thought and action. Biological racial realists argue that race is too quickly dismissed as biologically meaningful, and that it has a role to play in contemporary life sciences. The Element explores these views and shows their virtues and shortcomings. In particular, it advances an argument against biological racial realism that draws on the metaphysics of naturalness and philosophy of biology and medicine.</p>
@@ -199,7 +204,36 @@ footer { padding: 28px 0 56px; border-top: 1px solid var(--rule); font-family: v
 
   </div>
 </section>
-
+<section id="chapters">
+  <h2 class="label">Chapters</h2>
+  <div class="col">
+    <article>
+      <h3>Race</h3>
+      <div class="meta">
+        <p>In Robert Jubb and Patrick Tomlin (eds), <em>Issues in Political Theory</em>, 5th edn. Oxford University Press, 2026</p>
+      </div>
+    </article>
+  </div>
+</section>
+  <section id="reviews">
+  <h2 class="label">Book reviews</h2>
+  <div class="col">
+    <article>
+      <h3><em>The Race Illusion: On the Reality of Racialization and the Myth of Race</em></h3>
+      <div class="meta">
+        <p>By Adam Hochman. Reviewed in <em>Ethics</em> 136(4), 2026</p>
+        <a href="https://www.journals.uchicago.edu/doi/10.1086/741047">Published version</a>
+      </div>
+    </article>
+    <article>
+      <h3><em>Racism, Not Race: Answers to Frequently Asked Questions</em></h3>
+      <div class="meta">
+        <p>By Joseph L. Graves Jr. and Alan H. Goodman. Reviewed in <em>The Quarterly Review of Biology</em> 97(4), 2022</p>
+        <a href="https://www.journals.uchicago.edu/doi/10.1086/722653">Published version</a>
+      </div>
+    </article>
+  </div>
+</section>
 <section id="in-progress">
   <h2 class="label">In progress</h2>
   <ul class="col">
